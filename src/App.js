@@ -1,16 +1,12 @@
 import React, { Component } from 'react'
 import styled, { injectGlobal } from 'styled-components'
+import './App.css'
 
 import CurrentPrice from './components/CurrentPrice'
 import PastPrice from './components/PastPrice'
 import dateUtils from './utils/dateUtils'
 
 injectGlobal`
-  @font-face {
-    font-family: 'Fira Code';
-    src: url('./fonts/FiraCode-Regular.ttf') format('truetype');
-  }
-
   body {
     background-color: #242526;
     color: white;
@@ -23,7 +19,7 @@ const Wrapper = styled.section`
   display: grid;
   text-align: center;
   grid-auto-rows: minmax(300px, auto);
-  padding: 150px 20px 100px 20px;
+  padding: 50px 20px 100px 20px;
 
   @media only screen and (min-width: 768px) {
     grid-template-columns: repeat(2, 1fr);

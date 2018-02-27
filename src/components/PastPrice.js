@@ -1,5 +1,10 @@
 import React, { Component } from 'react'
+import styled from 'styled-components'
 import RequestPrice from '../api'
+
+const SmallP = styled.p`
+    font-size:20px;
+`
 
 class PastPrice extends Component {
   constructor() {
@@ -22,7 +27,7 @@ class PastPrice extends Component {
   render() {
     return (
       <div>
-        <p>{this.props.description}</p>
+        <SmallP>{this.props.description}</SmallP>
         <p>{this.state.price}</p>
       </div>
     )

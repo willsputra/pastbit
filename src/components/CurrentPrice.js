@@ -3,11 +3,14 @@ import RequestPrice from '../api'
 import styled from 'styled-components'
 
 const SingleColumnGrid = styled.div`
-
     @media only screen and (min-width: 768px) {
         grid-column-start: 1;
         grid-column-end: 3;
     }
+`
+
+const SmallP = styled.p`
+    font-size:20px;
 `
 
 class CurrentPrice extends Component {
@@ -29,7 +32,7 @@ class CurrentPrice extends Component {
     render() {
       return (
         <SingleColumnGrid>
-            <p>Today</p>
+            <SmallP>Today</SmallP>
             <p>{this.state.price}</p>
         </SingleColumnGrid>
       )
